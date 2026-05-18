@@ -43,6 +43,7 @@ This project was developed as part of a full stack internship to demonstrate rea
 ---
 
 ## 📁 Project Structure
+
 navtrack/
 ├── 00-landingpage.html
 ├── 01-INDEX.HTML
@@ -59,6 +60,7 @@ navtrack/
 │   ├── js/
 │   └── images/
 └── README.md
+```
 
 
 ## 🛠️ Technology Stack
