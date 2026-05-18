@@ -63,62 +63,6 @@ navtrack/
 ```
 
 
-## 🛠️ Technology Stack
-### Frontend
-
-* HTML5
-* CSS3
-* JavaScript
-  
-### UI Design
-
-* Responsive Web Design
-* Modern Dashboard Layout
-### Optional Backend Integration
-
-* Node.js / Express.js
-* Django
-* Laravel
-
-### Database (Future Scope)
-
-* MySQL
-* PostgreSQL
-* MongoDB
-
-### Deployment
-
-* Vercel
-* Netlify
-* AWS
-
-
-## 🎯 Objectives
-
-* Simplify driving school operations
-* Enable online lesson booking
-* Track learner progress
-* Improve scheduling efficiency
-* Provide a seamless learning experience
-
-
-## 📌 Core Modules
-
-* Authentication System
-* Student Profile Management
-* Document Management
-* Lesson Scheduling
-* Learning Module
-* Dashboard Analytics
-
-## 🔮 Future Enhancements
-
-* Payment gateway integration
-* Real-time notifications
-* Instructor availability calendar
-* Mobile application
-* Certificate generation
-* Attendance tracking
 
 ## ⭐ Support
 
