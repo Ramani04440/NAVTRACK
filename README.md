@@ -1,4 +1,4 @@
-# NAVTRACK
+
 # NavTrack | Driving School Management System
 
 NavTrack is a comprehensive Driving School Management System designed to streamline the entire learning and administrative process for driving schools. The platform enables students to register, schedule lessons, track progress, access learning materials, and manage bookings, while instructors and administrators can oversee schedules, student records, and operational workflows.
