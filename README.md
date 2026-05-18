@@ -64,9 +64,3 @@ navtrack/
 
 
 
-## ⭐ Support
-
-If you found this project useful, please consider giving this repository a star.
-
-```
-```
