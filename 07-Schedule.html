@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NavTrack Desktop Class Schedule</title>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;900&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#197fe6",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#111a22",
+                        "surface-dark": "#1c2630", // Slightly lighter than bg for cards
+                        "border-dark": "#243647",
+                        "text-secondary": "#93adc8",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display min-h-screen flex flex-col overflow-hidden">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-border-dark dark:bg-background-dark bg-white px-6 py-3 shrink-0 z-20 relative">
+<div class="flex items-center gap-4 text-white">
+<div class="size-8 flex items-center justify-center bg-primary rounded-lg text-white">
+<span class="material-symbols-outlined">navigation</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">NavTrack</h2>
+</div>
+<!-- Desktop Nav Links -->
+<nav class="hidden md:flex items-center gap-8 ml-10">
+<a class="text-slate-500 dark:text-text-secondary hover:text-primary dark:hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Dashboard</a>
+<a class="text-primary dark:text-white text-sm font-bold leading-normal border-b-2 border-primary pb-0.5" href="#">Schedule</a>
+<a class="text-slate-500 dark:text-text-secondary hover:text-primary dark:hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Students</a>
+<a class="text-slate-500 dark:text-text-secondary hover:text-primary dark:hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Settings</a>
+</nav>
+<div class="flex flex-1 justify-end gap-6 items-center">
+<!-- Search Bar (Hidden on small mobile) -->
+<div class="hidden lg:flex relative group">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 text-text-secondary material-symbols-outlined text-[20px]">search</span>
+<input class="h-10 w-64 bg-slate-100 dark:bg-surface-dark border-none rounded-lg pl-10 pr-4 text-sm text-white focus:ring-1 focus:ring-primary placeholder-text-secondary" placeholder="Search student or class..." type="text"/>
+</div>
+<div class="flex gap-3 items-center">
+<button class="flex items-center justify-center rounded-lg h-10 w-10 hover:bg-slate-200 dark:hover:bg-surface-dark text-slate-500 dark:text-white transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-10 border-2 border-border-dark" data-alt="User profile picture of an instructor" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA6LOpuRp9DhgUxLo0H2EobF1yOR09xExfmr1xnFQ4gjM1MOnp5MjQGs9us7ZOEwSNemlLzSXni8jHbIJCb8skmLv4ZvNbmSSY1kXgyYzjbrXHVgeth5EnjWi0D2PbB5Spqgf3LEAsLqR2ldapSgGmtc1QH7xfwqdcWSZgXOUZEHwtM7WYLENS32-3Y_eJyhnFs9KdicJw4h_hqNpvKxdYKcMuCBEGP5whgyrz6ZId5lgtGXgqoqJnIR-kB4gi8sdc_omHycCz8pg");'></div>
+</div>
+</div>
+</header>
+<div class="flex flex-1 overflow-hidden relative">
+<!-- Left Sidebar (Filters & Calendar) -->
+<aside class="w-72 hidden lg:flex flex-col border-r border-border-dark bg-background-light dark:bg-[#161f28] p-5 gap-6 overflow-y-auto shrink-0">
+<!-- Mini Calendar Widget -->
+<div class="flex flex-col gap-3">
+<h3 class="text-slate-900 dark:text-white text-sm font-bold uppercase tracking-wider">October 2023</h3>
+<div class="bg-white dark:bg-surface-dark rounded-xl p-4 shadow-sm">
+<div class="grid grid-cols-7 gap-1 text-center mb-2">
+<span class="text-xs text-text-secondary font-medium">S</span>
+<span class="text-xs text-text-secondary font-medium">M</span>
+<span class="text-xs text-text-secondary font-medium">T</span>
+<span class="text-xs text-text-secondary font-medium">W</span>
+<span class="text-xs text-text-secondary font-medium">T</span>
+<span class="text-xs text-text-secondary font-medium">F</span>
+<span class="text-xs text-text-secondary font-medium">S</span>
+</div>
+<div class="grid grid-cols-7 gap-1 text-center">
+<!-- Example Calendar Days -->
+<span class="h-8 w-8 flex items-center justify-center text-sm text-text-secondary opacity-30">29</span>
+<span class="h-8 w-8 flex items-center justify-center text-sm text-text-secondary opacity-30">30</span>
+<span class="h-8 w-8 flex items-center justify-center text-sm dark:text-white">1</span>
+<span class="h-8 w-8 flex items-center justify-center text-sm dark:text-white">2</span>
+<span class="h-8 w-8 flex items-center justify-center text-sm dark:text-white">3</span>
+<span class="h-8 w-8 flex items-center justify-center text-sm dark:text-white">4</span>
+<span class="h-8 w-8 flex items-center justify-center text-sm dark:text-white">5</span>
+<span class="h-8 w-8 flex items-center justify-center text-sm dark:text-white">6</span>
+<span class="h-8 w-8 flex items-center justify-center text-sm dark:text-white">7</span>
+<span class="h-8 w-8 flex items-center justify-center text-sm dark:text-white">8</span>
+<span class="h-8 w-8 flex items-center justify-center text-sm dark:text-white">9</span>
+<button class="h-8 w-8 flex items-center justify-center text-sm bg-primary text-white rounded-full shadow-lg shadow-primary/40 font-bold">10</button>
+<span class="h-8 w-8 flex items-center justify-center text-sm dark:text-white">11</span>
+<span class="h-8 w-8 flex items-center justify-center text-sm dark:text-white">12</span>
+<!-- ... more days visually simplified -->
+</div>
+</div>
+</div>
+<!-- Filters -->
+<div class="flex flex-col gap-3">
+<div class="flex justify-between items-center">
+<h3 class="text-slate-900 dark:text-white text-sm font-bold uppercase tracking-wider">Filters</h3>
+<button class="text-xs text-primary hover:text-white transition-colors">Reset</button>
+</div>
+<div class="flex flex-col gap-2">
+<label class="flex items-center gap-3 p-2 rounded-lg hover:bg-slate-200 dark:hover:bg-surface-dark cursor-pointer transition-colors group">
+<div class="relative flex items-center justify-center w-5 h-5">
+<input checked="" class="peer appearance-none h-5 w-5 border border-border-dark rounded bg-transparent checked:bg-primary checked:border-primary transition-all" type="checkbox"/>
+<span class="material-symbols-outlined text-white absolute text-[16px] opacity-0 peer-checked:opacity-100 pointer-events-none">check</span>
+</div>
+<span class="text-sm dark:text-white group-hover:text-primary transition-colors">Upcoming</span>
+<span class="ml-auto text-xs text-text-secondary bg-surface-dark px-2 py-0.5 rounded-full">4</span>
+</label>
+<label class="flex items-center gap-3 p-2 rounded-lg hover:bg-slate-200 dark:hover:bg-surface-dark cursor-pointer transition-colors group">
+<div class="relative flex items-center justify-center w-5 h-5">
+<input class="peer appearance-none h-5 w-5 border border-border-dark rounded bg-transparent checked:bg-primary checked:border-primary transition-all" type="checkbox"/>
+<span class="material-symbols-outlined text-white absolute text-[16px] opacity-0 peer-checked:opacity-100 pointer-events-none">check</span>
+</div>
+<span class="text-sm dark:text-white group-hover:text-primary transition-colors">Pending Payment</span>
+<span class="ml-auto text-xs text-text-secondary bg-surface-dark px-2 py-0.5 rounded-full">2</span>
+</label>
+<label class="flex items-center gap-3 p-2 rounded-lg hover:bg-slate-200 dark:hover:bg-surface-dark cursor-pointer transition-colors group">
+<div class="relative flex items-center justify-center w-5 h-5">
+<input class="peer appearance-none h-5 w-5 border border-border-dark rounded bg-transparent checked:bg-primary checked:border-primary transition-all" type="checkbox"/>
+<span class="material-symbols-outlined text-white absolute text-[16px] opacity-0 peer-checked:opacity-100 pointer-events-none">check</span>
+</div>
+<span class="text-sm dark:text-white group-hover:text-primary transition-colors">Completed</span>
+</label>
+<label class="flex items-center gap-3 p-2 rounded-lg hover:bg-slate-200 dark:hover:bg-surface-dark cursor-pointer transition-colors group">
+<div class="relative flex items-center justify-center w-5 h-5">
+<input class="peer appearance-none h-5 w-5 border border-border-dark rounded bg-transparent checked:bg-primary checked:border-primary transition-all" type="checkbox"/>
+<span class="material-symbols-outlined text-white absolute text-[16px] opacity-0 peer-checked:opacity-100 pointer-events-none">check</span>
+</div>
+<span class="text-sm dark:text-white group-hover:text-primary transition-colors">Cancelled</span>
+</label>
+</div>
+</div>
+<!-- Quick Stats -->
+<div class="mt-auto bg-primary/10 rounded-xl p-4 border border-primary/20">
+<div class="flex items-center gap-2 mb-2 text-primary">
+<span class="material-symbols-outlined text-[20px]">trending_up</span>
+<span class="text-xs font-bold uppercase">Weekly Goal</span>
+</div>
+<div class="w-full bg-background-dark h-2 rounded-full overflow-hidden mb-2">
+<div class="bg-primary h-full w-[75%] rounded-full"></div>
+</div>
+<p class="text-xs text-text-secondary">12/16 Lessons completed</p>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col h-full overflow-hidden relative">
+<!-- Sticky Header for Content -->
+<div class="flex flex-col gap-4 p-6 pb-2 shrink-0 z-10 bg-background-light dark:bg-background-dark/95 backdrop-blur-sm sticky top-0">
+<div class="flex flex-wrap justify-between items-end gap-4">
+<div class="flex flex-col gap-1">
+<h1 class="text-slate-900 dark:text-white text-3xl font-black leading-tight tracking-[-0.033em]">Class Schedule</h1>
+<p class="text-text-secondary text-base font-normal">Manage your driving lessons for today.</p>
+</div>
+<div class="flex items-center gap-3">
+<!-- View Toggle -->
+<div class="hidden sm:flex h-10 items-center justify-center rounded-lg bg-slate-200 dark:bg-surface-dark p-1">
+<label class="flex cursor-pointer h-full items-center justify-center rounded-md px-4 bg-white dark:bg-[#2c3b4b] shadow-sm text-slate-900 dark:text-white text-sm font-medium leading-normal transition-all">
+<span class="material-symbols-outlined text-[18px] mr-2">list</span>
+                                List
+                                <input checked="" class="invisible w-0 h-0 absolute" name="view" type="radio" value="List View"/>
+</label>
+<label class="flex cursor-pointer h-full items-center justify-center rounded-md px-4 text-text-secondary hover:text-primary dark:hover:text-white text-sm font-medium leading-normal transition-all">
+<span class="material-symbols-outlined text-[18px] mr-2">calendar_month</span>
+                                Calendar
+                                <input class="invisible w-0 h-0 absolute" name="view" type="radio" value="Calendar View"/>
+</label>
+</div>
+<button class="flex items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary hover:bg-blue-600 text-white text-sm font-bold leading-normal tracking-[0.015em] transition-colors shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-[20px] mr-2">add</span>
+<span class="truncate">Add Lesson</span>
+</button>
+</div>
+</div>
+<!-- Active Filters (Chips) - Mobile/Tablet mainly, but good for quick context on desktop -->
+<div class="flex gap-2 overflow-x-auto pb-2 scrollbar-hide lg:hidden">
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-surface-dark pl-2 pr-4 border border-border-dark">
+<span class="material-symbols-outlined text-white text-[16px]">filter_list</span>
+<span class="text-white text-sm">Filters</span>
+</button>
+<div class="w-px h-8 bg-border-dark mx-1"></div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-surface-dark pl-2 pr-4 border border-border-dark">
+<span class="material-symbols-outlined text-primary text-[18px]">schedule</span>
+<p class="text-white text-sm font-medium">Today</p>
+</div>
+</div>
+<div class="w-full h-px bg-border-dark mt-2"></div>
+</div>
+<!-- Scrollable Card Grid -->
+<div class="flex-1 overflow-y-auto p-6 pt-2">
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 pb-10">
+<!-- Card 1: Active/Now -->
+<article class="flex flex-col bg-white dark:bg-surface-dark rounded-xl border-l-4 border-primary shadow-sm overflow-hidden hover:translate-y-[-2px] transition-transform duration-200 group">
+<div class="p-5 flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div class="flex flex-col">
+<span class="text-primary text-xs font-bold uppercase tracking-wider mb-1">Ongoing • 1h remaining</span>
+<h3 class="text-slate-900 dark:text-white text-lg font-bold">10:00 AM - 12:00 PM</h3>
+</div>
+<div class="bg-primary/10 text-primary p-2 rounded-lg">
+<span class="material-symbols-outlined">directions_car</span>
+</div>
+</div>
+<div class="h-px w-full bg-slate-100 dark:bg-border-dark"></div>
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-12" data-alt="Portrait of student Sarah J." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDvRu-8pjTJ3LXWZcl7o60in7kGTtNQkHhbbIAXPNHO0hXYMWD6yH_9LD_Ya8Yu3Iej6D3ZKawOruybcVKp2Ox8dcq-Tdm0YJGlWYLpbMbmfA16lfkm80yu_Nu8bD8BljLFUpi9x8nRVgdDbnOiScz03Rr6oiOhS0GKBaaf27D79_1IPzm7EuiTnpmeSgMk2rU6q-_p-OyOu5G6FCxm2jGv9fxx_SFXaf1JxpIygtNLp1U3j2tKe9cQmQCqXFYwNmJdzeZL8HWSeA");'></div>
+<div class="flex flex-col">
+<p class="text-slate-900 dark:text-white text-base font-bold">Sarah Jenkins</p>
+<p class="text-text-secondary text-sm">Highway Practice</p>
+</div>
+</div>
+<!-- Mini Map Preview for route -->
+<div class="w-full h-24 rounded-lg bg-slate-800 relative overflow-hidden mt-1 group-hover:opacity-100 transition-opacity">
+<div class="absolute inset-0 bg-cover bg-center opacity-60" data-alt="Map showing driving route in city" data-location="City map view" style='background-image: url("https://placeholder.pics/svg/300");'></div>
+<div class="absolute bottom-2 right-2 bg-black/70 backdrop-blur-md px-2 py-1 rounded text-[10px] text-white flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">near_me</span> Route A
+                                </div>
+</div>
+</div>
+<div class="mt-auto bg-slate-50 dark:bg-[#161f28] p-3 flex gap-2 border-t border-slate-100 dark:border-border-dark">
+<button class="flex-1 h-9 rounded bg-primary text-white text-sm font-semibold hover:bg-blue-600 transition-colors">Log Details</button>
+<button class="h-9 w-9 rounded flex items-center justify-center border border-border-dark text-text-secondary hover:text-white hover:bg-border-dark transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+</div>
+</article>
+<!-- Card 2: Upcoming -->
+<article class="flex flex-col bg-white dark:bg-surface-dark rounded-xl border border-slate-200 dark:border-border-dark shadow-sm overflow-hidden hover:border-primary/50 transition-colors group">
+<div class="p-5 flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div class="flex flex-col">
+<span class="text-text-secondary text-xs font-bold uppercase tracking-wider mb-1">In 3 Hours</span>
+<h3 class="text-slate-900 dark:text-white text-lg font-bold">02:00 PM - 03:30 PM</h3>
+</div>
+<div class="bg-slate-100 dark:bg-border-dark text-text-secondary p-2 rounded-lg">
+<span class="material-symbols-outlined">local_parking</span>
+</div>
+</div>
+<div class="h-px w-full bg-slate-100 dark:bg-border-dark"></div>
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-12" data-alt="Portrait of student Michael B." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAgDCSU9C68uhYNFIzGJXoNo8z8WTEv98maY9In4hm0D0_oUXd57utOSim_bUXA-JYC5m3HXofPhyD0pEmAb2b_189ciXvXITL87T2XCQJEJBURc0ibp9Y2TTh4DfMigddmHiaLLsa8E-_EpzYOvHRD9Rk91hPGeSv4O5OY5tDGkOUSfSm9HdjTe4MKHN8ArjZ2CGMSyIqRSiiZj6aZs6JZfuiZsx_SIh3_SaoBUv7Ik5T4nXJnEXLJxBKS4Cb5s4tmW8J6WaKT5g");'></div>
+<div class="flex flex-col">
+<p class="text-slate-900 dark:text-white text-base font-bold">Michael Brown</p>
+<p class="text-text-secondary text-sm">Parking Maneuvers</p>
+</div>
+</div>
+<div class="flex items-center gap-2 mt-2">
+<span class="px-2 py-1 rounded bg-green-500/10 text-green-500 text-xs font-bold border border-green-500/20">Confirmed</span>
+<span class="px-2 py-1 rounded bg-slate-700/50 text-text-secondary text-xs border border-border-dark">Toyota Camry</span>
+</div>
+</div>
+<div class="mt-auto bg-slate-50 dark:bg-[#161f28] p-3 flex gap-2 border-t border-slate-100 dark:border-border-dark">
+<button class="flex-1 h-9 rounded bg-white dark:bg-border-dark border border-slate-200 dark:border-transparent text-slate-700 dark:text-white text-sm font-semibold hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors">View Profile</button>
+<button class="h-9 w-9 rounded flex items-center justify-center border border-slate-200 dark:border-border-dark text-text-secondary hover:text-white hover:bg-border-dark transition-colors">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+</article>
+<!-- Card 3: Pending -->
+<article class="flex flex-col bg-white dark:bg-surface-dark rounded-xl border border-slate-200 dark:border-border-dark shadow-sm overflow-hidden hover:border-yellow-500/50 transition-colors group">
+<div class="p-5 flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div class="flex flex-col">
+<span class="text-yellow-500 text-xs font-bold uppercase tracking-wider mb-1">Pending Approval</span>
+<h3 class="text-slate-900 dark:text-white text-lg font-bold">04:00 PM - 05:00 PM</h3>
+</div>
+<div class="bg-yellow-500/10 text-yellow-500 p-2 rounded-lg">
+<span class="material-symbols-outlined">warning</span>
+</div>
+</div>
+<div class="h-px w-full bg-slate-100 dark:bg-border-dark"></div>
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-12" data-alt="Portrait of student Emily W." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB4KXWA8sAqRMIzhd06w0Htfp9x7ghhv80ssXUSusLcGakMAuQZ4M8CvowIiaOSiWaRMcasl4qxgyOdgOt1lDuGg19Y9ykHZIGgQizI-DiYveESAC80uZxW_TG0YxwsTBJPDHnuLzPIVAtVy_L2peX7Kq_z4hAre_0R6vRWfudg0Tanp-oYw2VcDt8QlsJEA9YN2reeLA9SDM2DvTYpW40bqg19dVunj0k_w-p_laDwYEOkBVDVlJwgBL5KPghwSfisyat7W6YXaQ");'></div>
+<div class="flex flex-col">
+<p class="text-slate-900 dark:text-white text-base font-bold">Emily Wilson</p>
+<p class="text-text-secondary text-sm">City Driving</p>
+</div>
+</div>
+<div class="flex items-center gap-2 mt-2">
+<span class="px-2 py-1 rounded bg-yellow-500/10 text-yellow-500 text-xs font-bold border border-yellow-500/20">Needs Payment</span>
+</div>
+</div>
+<div class="mt-auto bg-slate-50 dark:bg-[#161f28] p-3 flex gap-2 border-t border-slate-100 dark:border-border-dark">
+<button class="flex-1 h-9 rounded bg-primary text-white text-sm font-semibold hover:bg-blue-600 transition-colors">Approve</button>
+<button class="h-9 w-9 rounded flex items-center justify-center border border-slate-200 dark:border-border-dark text-text-secondary hover:text-red-400 hover:bg-border-dark transition-colors">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</article>
+<!-- Card 4: Tomorrow -->
+<article class="flex flex-col bg-white dark:bg-surface-dark rounded-xl border border-slate-200 dark:border-border-dark shadow-sm overflow-hidden hover:border-primary/50 transition-colors opacity-75 hover:opacity-100">
+<div class="p-5 flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div class="flex flex-col">
+<span class="text-text-secondary text-xs font-bold uppercase tracking-wider mb-1">Tomorrow</span>
+<h3 class="text-slate-900 dark:text-white text-lg font-bold">09:00 AM - 10:30 AM</h3>
+</div>
+<div class="bg-slate-100 dark:bg-border-dark text-text-secondary p-2 rounded-lg">
+<span class="material-symbols-outlined">school</span>
+</div>
+</div>
+<div class="h-px w-full bg-slate-100 dark:bg-border-dark"></div>
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-12" data-alt="Portrait of student David K." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC2GnGhpZHSs0RjR_VKAk57ttP2tZhTPHH1QfR0eli9wCysesaHF-gma0RgcgOWj66BEXdUBSfBFZHQDVV3KUINQbwnwSkup6oBOrITSVceD6XCLgtZaO6mGoRhYsA_iak9I8hUhxskalUYRZQAdhcFefh9dp0ETiTcZAf6WplNrqQ9AbYBAohLTkeh4Ghj-N1LEfT3al86Duq0IgwuMFwXdDRryYf2Rddr2Ws-198ZsLnD2IITaVHYEGAaDCkXAxiX_wSljsVEnQ");'></div>
+<div class="flex flex-col">
+<p class="text-slate-900 dark:text-white text-base font-bold">David Kim</p>
+<p class="text-text-secondary text-sm">Theory Test Prep</p>
+</div>
+</div>
+<div class="flex items-center gap-2 mt-2">
+<span class="px-2 py-1 rounded bg-purple-500/10 text-purple-400 text-xs font-bold border border-purple-500/20">Classroom</span>
+</div>
+</div>
+<div class="mt-auto bg-slate-50 dark:bg-[#161f28] p-3 flex gap-2 border-t border-slate-100 dark:border-border-dark">
+<button class="flex-1 h-9 rounded bg-white dark:bg-border-dark border border-slate-200 dark:border-transparent text-slate-700 dark:text-white text-sm font-semibold hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors">Reschedule</button>
+</div>
+</article>
+<!-- Card 5: Empty Slot Placeholder -->
+<article class="flex flex-col items-center justify-center bg-transparent border-2 border-dashed border-border-dark rounded-xl min-h-[260px] hover:bg-surface-dark/50 transition-colors cursor-pointer group">
+<div class="bg-surface-dark p-4 rounded-full mb-3 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-text-secondary text-[32px]">add</span>
+</div>
+<p class="text-text-secondary font-medium group-hover:text-white transition-colors">Add break or slot</p>
+<p class="text-text-secondary text-xs mt-1">11:00 AM - 01:00 PM</p>
+</article>
+</div>
+</div>
+</main>
+</div>
+</body></html>

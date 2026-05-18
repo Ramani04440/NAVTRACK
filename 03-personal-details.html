@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NavTrack - Personal Details</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#10b981", // Green from the Continue button and progress bar
+                        "primary-hover": "#059669",
+                        "background-light": "#f3f4f6", // Light grey for light mode
+                        "background-dark": "#111827", // Deep dark blue/black for main bg
+                        "card-dark": "#1f2937", // Lighter dark blue for card
+                        "input-bg-dark": "#374151",
+                        "nav-blue": "#0ea5e9", // Blue for the logo gradient
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Inter', 'sans-serif'],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        'xl': "1rem",
+                        '2xl': "1.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+<style>body {
+    font-family: "Inter", sans-serif
+    }.custom-bg {
+    background: radial-gradient(circle at 50% 0%, #1e293b 0%, #0f172a 100%)
+    }
+.dark .custom-bg {
+    background: radial-gradient(circle at 50% 0%, #1f2937 0%, #111827 100%)
+    }.pattern-overlay {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDRzCIhBAjKCee2e4J5rHEFy_SVdrh9_6Y4Bfl_vRi_2tPieLTQ5MrKHlw-Wouv_B3DXGKpnlPqTCqwNCq35Z95nCSozbG4lSX6lDnjGa3NsHGp1jng1IeDIqZs-xlfyNMTtxSM4WLtx_wckIrFf-V4FOXEtnF6OUWcxh78IKXU9_XyKdo7frm5Pruc0hz-5Df10QQ4gKVyEDWTduWGVAIBHjtPqwoVOlzlEb9CXtWb7-q6tMo0lIMMZyQZUnEpHBmS4aMQvYwrubM)
+    }</style>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex flex-col text-gray-900 dark:text-white transition-colors duration-300">
+<nav class="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between h-16 items-center">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center shadow-lg shadow-blue-500/30">
+<span class="material-icons-round text-white text-xl">directions_car</span>
+</div>
+<span class="font-bold text-xl tracking-tight text-gray-900 dark:text-white">NavTrack</span>
+</div>
+<div class="hidden md:flex flex-col items-center w-1/3">
+<div class="flex justify-between w-full text-xs font-medium text-gray-500 dark:text-gray-400 mb-2">
+<span>Step 2 of 3</span>
+<span class="text-primary">66% Completed</span>
+</div>
+<div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 overflow-hidden">
+<div class="flex h-full w-full">
+<div class="w-1/3 bg-primary h-2.5 rounded-full mr-1"></div>
+<div class="w-1/3 bg-primary h-2.5 rounded-full mr-1 relative overflow-hidden">
+<div class="absolute inset-0 bg-white/20 animate-pulse"></div>
+</div>
+<div class="w-1/3 bg-gray-300 dark:bg-gray-600 h-2.5 rounded-full"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-gray-500 dark:text-gray-400">
+<span class="material-icons-round">help_outline</span>
+</button>
+<div class="h-8 w-8 rounded-full bg-gray-200 dark:bg-gray-700 overflow-hidden border border-gray-300 dark:border-gray-600">
+<img alt="User Profile" class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDC6u2-OhKNtrixM6Ogj1IwlbkFyyg_MP0QK7dMy69ieKDeQ2niqU8oftpRvRp_YnJhTkp-DMlv9Ksp-94O5f_XaopfE9ENFhgWGZkoLsoUFCAAkbABcmtRDXrkSc5QdUm7z-5u-88NhN0ub6pmNua5V7MaFMO1lewZNqi2f2f-m9gtGF-O6u_5XuSksgP3zxj-XtsBG8dJv1NNJriLyJv8J_QTlwGdj3OvVCxDDtpxmV1EY7H6eRUG4hb4Zt50Foo07UBK3YLREII"/>
+</div>
+</div>
+</div>
+</div>
+<div class="md:hidden w-full bg-gray-200 dark:bg-gray-800 h-1">
+<div class="bg-primary h-1" style="width: 66%"></div>
+</div>
+</nav>
+<main class="flex-grow custom-bg pattern-overlay flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+<div class="w-full max-w-4xl">
+<div class="mb-8 text-center md:text-left">
+<h1 class="text-3xl font-bold text-gray-900 dark:text-white mb-2">Personal Details</h1>
+<p class="text-gray-600 dark:text-gray-400">Please provide your personal information to proceed with your registration.</p>
+</div>
+<form class="bg-white dark:bg-card-dark rounded-2xl shadow-xl overflow-hidden border border-gray-100 dark:border-gray-700">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-0 md:divide-x dark:divide-gray-700">
+<div class="p-8 space-y-6">
+<div class="flex items-center gap-2 mb-6 border-b border-gray-100 dark:border-gray-700 pb-4">
+<span class="material-icons-round text-gray-400 dark:text-gray-500">person</span>
+<h2 class="text-lg font-semibold text-gray-800 dark:text-gray-200">Personal Information</h2>
+</div>
+<div class="space-y-4">
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="dob">Date of Birth</label>
+<div class="relative">
+<input class="block w-full pl-4 pr-10 py-3 rounded-xl border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 focus:ring-primary focus:border-primary transition-shadow" id="dob" placeholder="Select date" type="text"/>
+<div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+<span class="material-icons-round text-gray-400">calendar_today</span>
+</div>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="gender">Gender</label>
+<div class="relative">
+<select class="block w-full pl-4 pr-10 py-3 rounded-xl border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white appearance-none focus:ring-primary focus:border-primary transition-shadow" id="gender">
+<option disabled="" selected="" value="">Select gender</option>
+<option value="male">Male</option>
+<option value="female">Female</option>
+<option value="other">Other</option>
+</select>
+<div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+<span class="material-icons-round text-gray-400">expand_more</span>
+</div>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="phone">Phone Number</label>
+<div class="relative">
+<input class="block w-full pl-4 pr-10 py-3 rounded-xl border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 focus:ring-primary focus:border-primary transition-shadow" id="phone" placeholder="+1 (555) 000-0000" type="tel"/>
+<div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+<span class="material-icons-round text-gray-400">phone</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-8 space-y-6 bg-gray-50/50 dark:bg-gray-800/30">
+<div class="flex items-center gap-2 mb-6 border-b border-gray-200 dark:border-gray-700 pb-4">
+<span class="material-icons-round text-gray-400 dark:text-gray-500">location_on</span>
+<h2 class="text-lg font-semibold text-gray-800 dark:text-gray-200">Address Details</h2>
+</div>
+<div class="space-y-4">
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="address1">Address Line 1</label>
+<input class="block w-full px-4 py-3 rounded-xl border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 focus:ring-primary focus:border-primary transition-shadow" id="address1" placeholder="Street address, P.O. box" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="city">City</label>
+<input class="block w-full px-4 py-3 rounded-xl border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 focus:ring-primary focus:border-primary transition-shadow" id="city" placeholder="Enter city" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="state">State</label>
+<div class="relative">
+<select class="block w-full pl-4 pr-8 py-3 rounded-xl border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white appearance-none focus:ring-primary focus:border-primary transition-shadow" id="state">
+<option disabled="" selected="" value="">Select</option>
+<option value="CA">California</option>
+<option value="NY">New York</option>
+<option value="TX">Texas</option>
+</select>
+<div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+<span class="material-icons-round text-gray-400">expand_more</span>
+</div>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="zip">Pincode</label>
+<input class="block w-full px-4 py-3 rounded-xl border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 focus:ring-primary focus:border-primary transition-shadow" id="zip" placeholder="000000" type="text"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-gray-50 dark:bg-gray-800/80 px-8 py-6 flex flex-col-reverse md:flex-row justify-between items-center gap-4 border-t border-gray-200 dark:border-gray-700">
+<button class="w-full md:w-auto px-8 py-3 rounded-xl border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-white bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 font-medium transition-colors flex items-center justify-center gap-2 group" type="button">
+<span class="material-icons-round text-sm group-hover:-translate-x-1 transition-transform">arrow_back</span>
+                        Back
+                    </button>
+<div class="flex flex-col md:flex-row items-center gap-4 w-full md:w-auto">
+<p class="text-xs text-gray-500 dark:text-gray-400 text-center md:text-right">Your information is secure and encrypted <span class="material-icons-round text-[10px] align-middle ml-1">lock</span></p>
+<button class="w-full md:w-auto px-8 py-3 rounded-xl bg-primary hover:bg-primary-hover text-white font-medium shadow-lg shadow-primary/30 transition-all transform hover:scale-[1.02] flex items-center justify-center gap-2 group" type="submit">
+                            Continue
+                            <span class="material-icons-round text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</form>
+</div>
+</main>
+<script>
+        // Simple script to toggle dark mode for demonstration purposes
+        // In a real app, this would be handled by system preference or a toggle button
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.add('dark'); // Defaulting to dark as per screenshot style
+        }
+    </script>
+
+</body></html>

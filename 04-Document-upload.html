@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NavTrack - Upload Documents</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#10B981", // Emerald Green for actions/progress
+              "primary-hover": "#059669",
+              "background-light": "#F3F4F6",
+              "background-dark": "#0B1121", // Deep dark blue from screenshot
+              "card-light": "#FFFFFF",
+              "card-dark": "#171F32", // Slightly lighter navy for cards
+              "surface-light": "#E5E7EB",
+              "surface-dark": "#1F2937",
+              "border-dashed-light": "#D1D5DB",
+              "border-dashed-dark": "#374151",
+              "text-secondary-light": "#6B7280",
+              "text-secondary-dark": "#9CA3AF",
+            },
+            fontFamily: {
+              display: ["Inter", "sans-serif"],
+              sans: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              'xl': '1rem',
+              '2xl': '1.5rem',
+            },
+            boxShadow: {
+                'glow': '0 0 20px rgba(16, 185, 129, 0.15)',
+            }
+          },
+        },
+      };
+    </script>
+<style>.bg-glow-blob {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.15;
+    z-index: 0;
+    pointer-events: none
+    }
+.dashed-border {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCHDdsn7pFOJbzbYKr9sCzVMAmuJD-cDVI3tvHVFF6iyf9qa9TlRhnoIH73nLaFX9A7vnEV1ZkUhEzfFrxNv1HpWVeBQULkapByxjFugjZWgqj3Na4JesLRCQ60SuJjXgoQesrr1DXuGDEkthoXQk_4p7QFMTB2xAInFBuKas6u1_1eERbgXMl2qyPrrls7GhDXY1P-Wbh_HzAP5q0Ebo-zIwFa5ePXpia8YvlXZOe26bxRJkXo8sdz2r9o55hhI5W0j-_ccpfPAQ)
+    }
+.dark .dashed-border {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCwZIIBaVt7CU0-H7qbEn7zix4YVZRs4NPuyCWI4_caeSCbiwEV2lX-DTK9WTlbF-XrnclQ5cpC3-RCwgnzbKNBHMnS37IKNuhjTQkN9ZabZrrLF6QeTlxYOClI2guka9lqC2EwftAv7p-U0r4o94Y3shm5ZeoX9eUqWDNEpSytDTZ1QLXcb5bv4R6p-_gvCk9ykc3BrWOfWxxc4cBKXpJBkR8GwPA-H5lESFwxM5CuRMfrRFAFA6EgyjR4d5ZG4A25NwmbI8Pm8w)
+    }</style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-gray-900 dark:text-white font-sans min-h-screen flex flex-col relative overflow-x-hidden selection:bg-primary selection:text-white">
+<div class="bg-glow-blob bg-blue-600 top-0 left-0 dark:block hidden"></div>
+<div class="bg-glow-blob bg-primary bottom-0 right-0 dark:block hidden"></div>
+<nav class="w-full z-20 bg-white/80 dark:bg-[#0B1121]/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 sticky top-0">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-20">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl flex items-center justify-center shadow-lg">
+<span class="material-icons-round text-white text-2xl">directions_car</span>
+</div>
+<span class="text-2xl font-bold tracking-tight">NavTrack</span>
+</div>
+<div class="hidden md:flex space-x-8 text-sm font-medium text-gray-500 dark:text-gray-400">
+<a class="hover:text-primary transition-colors" href="#">Dashboard</a>
+<a class="text-primary" href="#">Registration</a>
+<a class="hover:text-primary transition-colors" href="#">Support</a>
+</div>
+<div class="hidden md:flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
+<span class="material-icons-round text-gray-500 dark:text-gray-300 text-sm">person</span>
+</div>
+</div>
+</div>
+</div>
+</nav>
+<main class="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 z-10 relative">
+<div class="max-w-4xl mx-auto mb-12">
+<div class="flex justify-between items-end mb-2">
+<span class="text-sm font-medium text-gray-600 dark:text-gray-300">Step 3 of 3</span>
+<div class="flex items-center text-primary font-bold text-sm">
+<span class="material-icons-round mr-1">check_circle</span>
+                    100%
+                </div>
+</div>
+<div class="flex gap-2 h-2">
+<div class="flex-1 bg-primary rounded-full shadow-glow"></div>
+<div class="flex-1 bg-primary rounded-full shadow-glow"></div>
+<div class="flex-1 bg-primary rounded-full shadow-glow"></div>
+</div>
+</div>
+<div class="text-center mb-10">
+<h1 class="text-3xl md:text-4xl font-bold mb-3">Upload Required Documents</h1>
+<p class="text-text-secondary-light dark:text-text-secondary-dark max-w-2xl mx-auto">
+                Please upload clear images or PDFs of the required documents below. Your information is secure with us.
+            </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+<div class="bg-card-light dark:bg-card-dark border border-gray-200 dark:border-gray-700/50 rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center text-blue-500 dark:text-blue-400">
+<span class="material-icons-outlined">badge</span>
+</div>
+<div>
+<h3 class="font-semibold text-lg leading-tight">Aadhar Card</h3>
+<span class="text-xs text-text-secondary-light dark:text-text-secondary-dark">Required</span>
+</div>
+</div>
+<button class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200">
+<span class="material-icons-outlined text-xl">info</span>
+</button>
+</div>
+<div class="dashed-border rounded-xl p-6 flex flex-col items-center justify-center text-center cursor-pointer hover:bg-gray-50 dark:hover:bg-white/5 transition-colors h-48 group">
+<div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm mb-3 group-hover:scale-110 transition-transform">
+<span class="material-icons-round text-blue-500 text-2xl">cloud_upload</span>
+</div>
+<p class="text-sm font-medium mb-1 group-hover:text-blue-500 transition-colors">Tap to upload or drag &amp; drop</p>
+<p class="text-xs text-text-secondary-light dark:text-text-secondary-dark">PDF, JPG, PNG • Max 10MB</p>
+</div>
+</div>
+<div class="bg-card-light dark:bg-card-dark border border-gray-200 dark:border-gray-700/50 rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-green-50 dark:bg-green-900/30 flex items-center justify-center text-green-500 dark:text-green-400">
+<span class="material-icons-outlined">photo_camera</span>
+</div>
+<div>
+<h3 class="font-semibold text-lg leading-tight">Passport-size Photo</h3>
+<span class="text-xs text-text-secondary-light dark:text-text-secondary-dark">Required</span>
+</div>
+</div>
+<button class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200">
+<span class="material-icons-outlined text-xl">info</span>
+</button>
+</div>
+<div class="dashed-border rounded-xl p-6 flex flex-col items-center justify-center text-center cursor-pointer hover:bg-gray-50 dark:hover:bg-white/5 transition-colors h-48 group">
+<div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm mb-3 group-hover:scale-110 transition-transform">
+<span class="material-icons-round text-green-500 text-2xl">cloud_upload</span>
+</div>
+<p class="text-sm font-medium mb-1 group-hover:text-green-500 transition-colors">Tap to upload or drag &amp; drop</p>
+<p class="text-xs text-text-secondary-light dark:text-text-secondary-dark">JPG, PNG • Max 2MB</p>
+</div>
+</div>
+<div class="bg-card-light dark:bg-card-dark border border-gray-200 dark:border-gray-700/50 rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-purple-50 dark:bg-purple-900/30 flex items-center justify-center text-purple-500 dark:text-purple-400">
+<span class="material-icons-outlined">gesture</span>
+</div>
+<div>
+<h3 class="font-semibold text-lg leading-tight">Payment Screenshot</h3>
+<span class="text-xs text-text-secondary-light dark:text-text-secondary-dark">Required</span>
+</div>
+</div>
+<button class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200">
+<span class="material-icons-outlined text-xl">info</span>
+</button>
+</div>
+<div class="dashed-border rounded-xl p-6 flex flex-col items-center justify-center text-center cursor-pointer hover:bg-gray-50 dark:hover:bg-white/5 transition-colors h-48 group">
+<div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm mb-3 group-hover:scale-110 transition-transform">
+<span class="material-icons-round text-purple-500 text-2xl">cloud_upload</span>
+</div>
+<p class="text-sm font-medium mb-1 group-hover:text-purple-500 transition-colors">Tap to upload or drag &amp; drop</p>
+<p class="text-xs text-text-secondary-light dark:text-text-secondary-dark">JPG, PNG • Max 5MB</p>
+</div>
+</div>
+</div>
+<div class="mt-12 max-w-4xl mx-auto border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row gap-4 items-center justify-between">
+<button class="w-full md:w-auto px-8 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-white text-gray-800 dark:bg-transparent dark:text-white font-semibold hover:bg-gray-50 dark:hover:bg-white/10 transition-colors flex items-center justify-center gap-2">
+<span class="material-icons-round text-lg">arrow_back</span>
+                Back
+            </button>
+<div class="w-full md:w-auto flex flex-col items-center gap-4">
+<button class="w-full md:w-auto px-12 py-3 rounded-xl bg-primary hover:bg-primary-hover text-white font-bold shadow-lg shadow-green-500/30 transition-all transform hover:scale-[1.02] active:scale-[0.98]">
+                    Register
+                </button>
+</div>
+</div>
+<div class="mt-8 text-center">
+<p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">
+                Need help? <a class="text-primary hover:underline" href="#">Contact Support</a>
+</p>
+</div>
+</main>
+<footer class="bg-white dark:bg-[#0B1121] border-t border-gray-200 dark:border-gray-800 py-6 mt-auto">
+<div class="max-w-7xl mx-auto px-4 text-center text-xs text-gray-500 dark:text-gray-400">
+            © 2023 NavTrack Inc. All rights reserved.
+        </div>
+</footer>
+
+</body></html>

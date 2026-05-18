@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NavTrack – Lesson Details</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            background: '#0b1220',
+            card: '#182235',
+            primary: '#22d3ee'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-background text-white font-sans antialiased">
+
+<!-- NAVBAR -->
+<header class="border-b border-white/5">
+  <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+    <div class="flex items-center gap-2 font-semibold text-lg">
+      <div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center">
+        <span class="material-icons-round text-black">directions_car</span>
+      </div>
+      NavTrack
+    </div>
+
+    <nav class="hidden md:flex items-center gap-8 text-gray-300">
+      <a href="#">Home</a>
+      <a href="#">Schedule</a>
+      <a href="#" class="text-primary border-b-2 border-primary pb-1">Lessons</a>
+      <a href="#">Payments</a>
+    </nav>
+  </div>
+</header>
+
+<!-- MAIN -->
+<main class="max-w-7xl mx-auto px-6 py-6">
+
+  <h1 class="text-2xl font-semibold mb-6">Lesson Details</h1>
+
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 items-start">
+
+    <!-- LEFT COLUMN -->
+    <div class="lg:col-span-2 flex flex-col gap-4">
+
+      <!-- PRACTICAL LESSON -->
+      <div class="bg-card rounded-2xl p-4 border border-white/5">
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 rounded-xl bg-primary flex items-center justify-center">
+            <span class="material-icons-round text-black">directions_car</span>
+          </div>
+
+          <div class="flex-1">
+            <div class="flex items-center gap-2">
+              <h2 class="font-semibold text-lg">Practical Lesson</h2>
+              <span class="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs">Upcoming</span>
+            </div>
+
+            <div class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-gray-300">
+              <div class="flex items-center gap-2">
+                <span class="material-icons-round text-primary text-sm">calendar_today</span>
+                March 12, 2025
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="material-icons-round text-primary text-sm">schedule</span>
+                08:00 – 09:00 AM
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="material-icons-round text-primary text-sm">settings</span>
+                Manual Transmission
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="material-icons-round text-primary text-sm">badge</span>
+                LMV Category
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- LOCATION DETAILS -->
+      <div class="bg-card rounded-2xl p-4 border border-white/5">
+        <h3 class="font-semibold mb-2">Location Details</h3>
+        <p class="text-sm text-gray-300">NavTrack Training Center, Chennai</p>
+        <p class="text-xs text-gray-400">No.45, Anna Salai, Chennai</p>
+
+        <button class="mt-4 w-full h-11 rounded-xl border border-primary text-primary hover:bg-primary/10 transition">
+          Open in Maps
+        </button>
+      </div>
+
+      <!-- LESSON GUIDELINES -->
+      <div class="bg-card rounded-2xl p-4 border border-white/5">
+        <h3 class="font-semibold mb-3">Lesson Guidelines</h3>
+        <ul class="space-y-3 text-sm text-gray-300">
+          <li class="flex gap-2"><span class="material-icons-round text-primary text-sm">check_circle</span>Carry valid Learner’s License or Driving License</li>
+          <li class="flex gap-2"><span class="material-icons-round text-primary text-sm">check_circle</span>Arrive 10 minutes before session start</li>
+          <li class="flex gap-2"><span class="material-icons-round text-primary text-sm">check_circle</span>Wear comfortable footwear</li>
+        </ul>
+      </div>
+
+      <!-- SESSION INFO -->
+      <div class="bg-card rounded-2xl p-4 border border-white/5">
+        <h3 class="font-semibold mb-3">Session Information</h3>
+        <div class="text-sm text-gray-300 space-y-2">
+          <p><strong>Duration:</strong> 60 Minutes</p>
+          <p><strong>Vehicle:</strong> Dual Control Training Car</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="flex flex-col gap-4">
+
+      <!-- INSTRUCTOR CARD -->
+      <div class="bg-card rounded-2xl p-4 border border-white/5">
+        <h3 class="font-semibold mb-3">Instructor</h3>
+
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-12 h-12 rounded-full bg-white/10"></div>
+          <div>
+            <p class="font-semibold">Mr. Ramesh Kumar</p>
+            <p class="text-xs text-gray-400">Senior Driving Instructor</p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3 text-center text-sm mb-4">
+          <div class="bg-white/5 rounded-xl py-2">8+<br><span class="text-xs text-gray-400">Years Exp</span></div>
+          <div class="bg-white/5 rounded-xl py-2">1200+<br><span class="text-xs text-gray-400">Students</span></div>
+          <div class="bg-white/5 rounded-xl py-2">4.8★<br><span class="text-xs text-gray-400">Rating</span></div>
+          <div class="bg-white/5 rounded-xl py-2">Govt.<br><span class="text-xs text-gray-400">Certified</span></div>
+        </div>
+
+        <p class="text-sm text-gray-300 mb-4">
+          Specializes in beginner-friendly training, defensive driving, traffic rules education, and confidence building for first-time drivers.
+        </p>
+
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="px-3 py-1 bg-white/10 rounded-full text-xs">LMV</span>
+          <span class="px-3 py-1 bg-white/10 rounded-full text-xs">Defensive Driving</span>
+          <span class="px-3 py-1 bg-white/10 rounded-full text-xs">Traffic Rules</span>
+          <span class="px-3 py-1 bg-white/10 rounded-full text-xs">Beginner Training</span>
+        </div>
+
+        <button class="w-full h-11 rounded-xl bg-primary text-black font-semibold">View Full Profile</button>
+      </div>
+
+      <!-- LESSON OVERVIEW -->
+      <div class="bg-card rounded-2xl p-4 border border-white/5">
+        <h3 class="font-semibold mb-3">Lesson Overview</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 bg-white text-black rounded-full text-xs">Braking</span>
+          <span class="px-3 py-1 bg-white text-black rounded-full text-xs">Turning</span>
+          <span class="px-3 py-1 bg-white text-black rounded-full text-xs">Reverse</span>
+          <span class="px-3 py-1 bg-white text-black rounded-full text-xs">Traffic Rules</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</main>
+
+</body>
+</html>

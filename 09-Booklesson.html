@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Book Lesson - DriveMaster</title>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&amp;family=Noto+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#36e27b",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#112117",
+                        "surface-dark": "#1c2e24",
+                        "surface-darker": "#16251d"
+                    },
+                    fontFamily: {
+                        "display": ["Spline Sans", "Noto Sans", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "1rem", "lg": "1.5rem", "xl": "2rem", "2xl": "3rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased text-slate-900 dark:text-white overflow-x-hidden selection:bg-primary selection:text-black">
+<div class="flex flex-col min-h-screen">
+<!-- Header -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#29382f] px-10 py-4 bg-background-dark sticky top-0 z-50">
+<div class="flex items-center gap-4 text-white">
+<div class="size-8 text-primary">
+<span class="material-symbols-outlined text-4xl">local_taxi</span>
+</div>
+<h2 class="text-white text-xl font-bold leading-tight tracking-tight">DriveMaster</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<nav class="hidden md:flex items-center gap-9">
+<a class="text-white/70 hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">Dashboard</a>
+<a class="text-white text-sm font-medium leading-normal" href="#">Lessons</a>
+<a class="text-white/70 hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">Instructors</a>
+<a class="text-white/70 hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">Progress</a>
+</nav>
+<div class="flex gap-3 items-center">
+<button class="flex size-10 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-[#29382f] hover:bg-[#3d5245] transition-colors text-white">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+</button>
+<button class="flex size-10 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-[#29382f] hover:bg-[#3d5245] transition-colors text-white">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+</button>
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-10 border-2 border-[#29382f]" data-alt="User profile avatar showing a smiling person" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDAkKpqZMpuL8Grzm4PeB3Dws5v___HETQ-A1w3dHiTc1ofLgL6KQxqa-bSNl3VANjaQraRPTL5tlUnbYrAJhfkqxtA8V1jym8S9emFqr8PPjplZdF8wu5OqS6WICnzzPe1biQSAoYlmTlWWw4PDUICbbJ5pVib4uxwNfRZ3yX07iuC0JeLmKyvUj27up_mLsNlj1XcbaHHwWyTtc71OLu9SL7K2tkyq71jJelRVVXLGi0W_qfVAScOnxfqYvtKC2JkhtR5zHu1Ar0");'></div>
+</div>
+</div>
+</header>
+<!-- Main Layout -->
+<main class="flex-1 w-full max-w-[1400px] mx-auto px-6 py-8 md:px-10 lg:px-16 flex flex-col gap-8">
+<!-- Breadcrumbs -->
+<div class="flex flex-wrap gap-2 items-center text-sm">
+<a class="text-[#9eb7a8] hover:text-primary transition-colors" href="#">Home</a>
+<span class="text-[#9eb7a8] material-symbols-outlined text-sm">chevron_right</span>
+<a class="text-[#9eb7a8] hover:text-primary transition-colors" href="#">Dashboard</a>
+<span class="text-[#9eb7a8] material-symbols-outlined text-sm">chevron_right</span>
+<span class="text-white font-medium">Book Lesson</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 h-full items-start">
+<!-- Left Content Column -->
+<div class="lg:col-span-8 flex flex-col gap-8">
+<!-- Page Heading & Progress -->
+<div class="flex flex-col gap-6">
+<div class="flex justify-between items-end">
+<div>
+<h1 class="text-white text-3xl md:text-4xl font-black leading-tight tracking-[-0.033em] mb-2">Book a Lesson</h1>
+<p class="text-[#9eb7a8] text-base font-normal">Schedule your next drive in just a few clicks.</p>
+</div>
+</div>
+<!-- Progress Bar Component -->
+<div class="bg-surface-dark p-5 rounded-2xl border border-[#29382f]">
+<div class="flex justify-between items-center mb-3">
+<span class="text-white font-semibold">Step 2 of 4</span>
+<span class="text-primary text-sm font-medium">50% Completed</span>
+</div>
+<div class="h-2 w-full bg-[#29382f] rounded-full overflow-hidden">
+<div class="h-full bg-primary w-1/2 rounded-full shadow-[0_0_10px_rgba(54,226,123,0.5)]"></div>
+</div>
+<div class="flex justify-between mt-3 text-xs text-[#9eb7a8] font-medium">
+<span>Type</span>
+<span class="text-white">Instructor</span>
+<span>Schedule</span>
+<span>Confirm</span>
+</div>
+</div>
+</div>
+<!-- Step 1: Lesson Type (Already Selected State for Context) -->
+<section>
+<h3 class="text-white text-xl font-bold mb-4 flex items-center gap-2">
+<span class="flex items-center justify-center size-8 rounded-full bg-primary text-black text-sm font-bold">1</span>
+                            Lesson Type
+                            <span class="ml-auto text-primary text-sm font-medium cursor-pointer hover:underline">Edit</span>
+</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 opacity-60 pointer-events-none grayscale">
+<!-- Disabled Card Example -->
+<div class="bg-surface-dark border border-primary p-4 rounded-xl flex items-center gap-4">
+<div class="size-12 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">directions_car</span>
+</div>
+<div>
+<h4 class="text-white font-bold">Practical Driving</h4>
+<p class="text-[#9eb7a8] text-xs">2 hours • Road Practice</p>
+</div>
+<span class="ml-auto material-symbols-outlined text-primary">check_circle</span>
+</div>
+</div>
+</section>
+<!-- Step 2: Instructor Selection (Active) -->
+<section class="animate-fade-in">
+<h3 class="text-white text-xl font-bold mb-4 flex items-center gap-2">
+<span class="flex items-center justify-center size-8 rounded-full bg-primary text-black text-sm font-bold">2</span>
+                            Select Instructor
+                        </h3>
+<!-- Filter/Search -->
+<div class="flex gap-4 mb-6">
+<div class="relative flex-1">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-[#9eb7a8]">search</span>
+<input class="w-full bg-surface-dark border border-[#29382f] text-white rounded-full py-2.5 pl-10 pr-4 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all placeholder-[#5e6e65]" placeholder="Search instructor by name..." type="text"/>
+</div>
+<button class="px-4 py-2 bg-surface-dark border border-[#29382f] rounded-full text-white hover:bg-[#29382f] flex items-center gap-2 transition-colors">
+<span class="material-symbols-outlined">tune</span> Filters
+                            </button>
+</div>
+<!-- Instructor Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Instructor Card 1 (Selected) -->
+<div class="group relative bg-surface-dark border-2 border-primary rounded-2xl p-5 cursor-pointer transition-all hover:shadow-[0_0_20px_rgba(54,226,123,0.1)]">
+<div class="absolute top-4 right-4 text-primary">
+<span class="material-symbols-outlined">radio_button_checked</span>
+</div>
+<div class="flex items-start gap-4">
+<div class="size-16 rounded-full bg-cover bg-center border-2 border-primary" data-alt="Portrait of driving instructor Sarah Jenkins" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAarGBiKzCd_vLodDqxBUkj9xX8w2iJ5IibE2GO9ZKS4gzJbUULWkZqMgUuf4pSJwEv2VBsaobu-gdYh7FBUhXVXp_p1JzLaqZPQkVjnZfX4pW1iwgyTvj-srK9QCTk4yyXob20k_BWXcCDc3dJNTrVrUMDCUfLLV9mctfpZWZmeOY_eS_0PM2Fz8xxbvWAxc4SBV4tEG42RyqYUDtOSoomG7xUqc0Zlqp0TfLQTI8m_MCSc0fiXdYaU0KYtN-wNLNb5sRHLbPivUk");'></div>
+<div>
+<h4 class="text-white font-bold text-lg">Sarah Jenkins</h4>
+<div class="flex items-center gap-1 text-yellow-400 text-sm mb-1">
+<span class="material-symbols-outlined text-[16px] fill-current">star</span>
+<span class="font-medium text-white">4.9</span>
+<span class="text-[#9eb7a8] text-xs">(124 reviews)</span>
+</div>
+<p class="text-[#9eb7a8] text-sm">Automatic • Toyota Corolla</p>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-[#29382f] flex justify-between items-center">
+<span class="text-[#9eb7a8] text-xs font-medium uppercase tracking-wider">Next Available</span>
+<span class="text-primary text-sm font-bold">Tomorrow, 10:00 AM</span>
+</div>
+</div>
+<!-- Instructor Card 2 -->
+<div class="group relative bg-surface-dark border border-[#29382f] rounded-2xl p-5 cursor-pointer hover:border-[#3d5245] transition-all">
+<div class="absolute top-4 right-4 text-[#29382f] group-hover:text-[#9eb7a8]">
+<span class="material-symbols-outlined">radio_button_unchecked</span>
+</div>
+<div class="flex items-start gap-4">
+<div class="size-16 rounded-full bg-cover bg-center border border-[#29382f]" data-alt="Portrait of driving instructor Mike Chen" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDi4SUJ_a2fgDn08_jBnAGgEYey0QyUSgRvdThbVwswIbRZM1J0T4AJ1gmoJq_fJq79hWkTEJUdnogczUq79EPVgTBkUFOTFVJCS5jwyhj1fjhHqJLIsByxvKmta9hCqOES0BGs461nDs1Pgflxd7bw_cuqQ536ZP5akLsjOTVnVB1PT2ost6NImc1NkQKOPZY3jfkwx84DLqYWtmnl4d3Qs5xN_ebSFNMMjGNQfwF6BAjLwfeUEsc5zUQwbphuyKqvK-T-ZrENUeY");'></div>
+<div>
+<h4 class="text-white font-bold text-lg">Mike Chen</h4>
+<div class="flex items-center gap-1 text-yellow-400 text-sm mb-1">
+<span class="material-symbols-outlined text-[16px] fill-current">star</span>
+<span class="font-medium text-white">4.8</span>
+<span class="text-[#9eb7a8] text-xs">(98 reviews)</span>
+</div>
+<p class="text-[#9eb7a8] text-sm">Manual • Ford Focus</p>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-[#29382f] flex justify-between items-center">
+<span class="text-[#9eb7a8] text-xs font-medium uppercase tracking-wider">Next Available</span>
+<span class="text-white text-sm font-bold">Wed, 2:00 PM</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Step 3: Date & Time -->
+<section>
+<h3 class="text-white text-xl font-bold mb-4 flex items-center gap-2">
+<span class="flex items-center justify-center size-8 rounded-full bg-[#29382f] text-[#9eb7a8] text-sm font-bold border border-[#3d5245]">3</span>
+                            Date &amp; Time
+                        </h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-surface-dark rounded-2xl p-6 border border-[#29382f]">
+<!-- Calendar Widget -->
+<div>
+<div class="flex justify-between items-center mb-4">
+<h4 class="text-white font-bold">October 2023</h4>
+<div class="flex gap-2">
+<button class="size-8 rounded-full hover:bg-[#29382f] flex items-center justify-center text-white"><span class="material-symbols-outlined">chevron_left</span></button>
+<button class="size-8 rounded-full hover:bg-[#29382f] flex items-center justify-center text-white"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+</div>
+<div class="grid grid-cols-7 gap-2 text-center text-sm mb-2">
+<span class="text-[#5e6e65] font-medium text-xs">Su</span>
+<span class="text-[#5e6e65] font-medium text-xs">Mo</span>
+<span class="text-[#5e6e65] font-medium text-xs">Tu</span>
+<span class="text-[#5e6e65] font-medium text-xs">We</span>
+<span class="text-[#5e6e65] font-medium text-xs">Th</span>
+<span class="text-[#5e6e65] font-medium text-xs">Fr</span>
+<span class="text-[#5e6e65] font-medium text-xs">Sa</span>
+</div>
+<div class="grid grid-cols-7 gap-2 text-center">
+<!-- Empty days -->
+<span></span><span></span>
+<!-- Days -->
+<button class="size-9 rounded-full text-[#9eb7a8] hover:bg-[#29382f] flex items-center justify-center mx-auto text-sm transition-colors">1</button>
+<button class="size-9 rounded-full text-[#9eb7a8] hover:bg-[#29382f] flex items-center justify-center mx-auto text-sm transition-colors">2</button>
+<button class="size-9 rounded-full text-[#9eb7a8] hover:bg-[#29382f] flex items-center justify-center mx-auto text-sm transition-colors">3</button>
+<button class="size-9 rounded-full text-[#9eb7a8] hover:bg-[#29382f] flex items-center justify-center mx-auto text-sm transition-colors">4</button>
+<button class="size-9 rounded-full text-[#9eb7a8] hover:bg-[#29382f] flex items-center justify-center mx-auto text-sm transition-colors">5</button>
+<button class="size-9 rounded-full text-[#9eb7a8] hover:bg-[#29382f] flex items-center justify-center mx-auto text-sm transition-colors">6</button>
+<button class="size-9 rounded-full text-[#9eb7a8] hover:bg-[#29382f] flex items-center justify-center mx-auto text-sm transition-colors">7</button>
+<button class="size-9 rounded-full text-[#9eb7a8] hover:bg-[#29382f] flex items-center justify-center mx-auto text-sm transition-colors">8</button>
+<button class="size-9 rounded-full text-[#9eb7a8] hover:bg-[#29382f] flex items-center justify-center mx-auto text-sm transition-colors">9</button>
+<button class="size-9 rounded-full bg-primary text-black font-bold flex items-center justify-center mx-auto text-sm shadow-[0_0_10px_rgba(54,226,123,0.4)] transform scale-110">10</button>
+<button class="size-9 rounded-full text-[#9eb7a8] hover:bg-[#29382f] flex items-center justify-center mx-auto text-sm transition-colors">11</button>
+<button class="size-9 rounded-full text-[#9eb7a8] hover:bg-[#29382f] flex items-center justify-center mx-auto text-sm transition-colors">12</button>
+</div>
+</div>
+<!-- Time Slots -->
+<div class="border-l border-[#29382f] pl-0 md:pl-6 pt-6 md:pt-0">
+<h4 class="text-white font-bold mb-4">Available Times</h4>
+<div class="flex flex-col gap-4 max-h-[250px] overflow-y-auto pr-2 custom-scrollbar">
+<div>
+<p class="text-[#5e6e65] text-xs font-bold uppercase tracking-wider mb-2">Morning</p>
+<div class="flex flex-wrap gap-2">
+<button class="px-4 py-2 rounded-full border border-[#29382f] bg-surface-darker text-white text-sm hover:border-primary hover:text-primary transition-all">09:00 AM</button>
+<button class="px-4 py-2 rounded-full border border-[#29382f] bg-surface-darker text-white text-sm hover:border-primary hover:text-primary transition-all">10:00 AM</button>
+<button class="px-4 py-2 rounded-full border border-[#29382f] bg-[#29382f]/50 text-[#5e6e65] text-sm cursor-not-allowed line-through">11:00 AM</button>
+</div>
+</div>
+<div>
+<p class="text-[#5e6e65] text-xs font-bold uppercase tracking-wider mb-2">Afternoon</p>
+<div class="flex flex-wrap gap-2">
+<button class="px-4 py-2 rounded-full border border-primary bg-primary/20 text-primary font-bold text-sm ring-1 ring-primary transition-all">01:00 PM</button>
+<button class="px-4 py-2 rounded-full border border-[#29382f] bg-surface-darker text-white text-sm hover:border-primary hover:text-primary transition-all">02:30 PM</button>
+<button class="px-4 py-2 rounded-full border border-[#29382f] bg-surface-darker text-white text-sm hover:border-primary hover:text-primary transition-all">04:00 PM</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Sidebar (Sticky Summary) -->
+<div class="lg:col-span-4 h-full">
+<div class="sticky top-28 bg-surface-dark rounded-2xl p-6 border border-[#29382f] flex flex-col gap-6 shadow-xl">
+<h3 class="text-white text-xl font-bold border-b border-[#29382f] pb-4">Booking Summary</h3>
+<div class="flex flex-col gap-4">
+<!-- Selected Lesson -->
+<div class="flex items-start gap-3">
+<div class="mt-1 p-1.5 rounded-lg bg-[#29382f] text-primary">
+<span class="material-symbols-outlined text-[20px]">directions_car</span>
+</div>
+<div class="flex-1">
+<p class="text-[#9eb7a8] text-xs font-medium uppercase tracking-wide">Lesson Type</p>
+<p class="text-white font-medium">Practical Driving</p>
+<p class="text-[#5e6e65] text-sm">2 Hours</p>
+</div>
+<p class="text-white font-bold">$120</p>
+</div>
+<!-- Selected Instructor -->
+<div class="flex items-start gap-3">
+<div class="mt-1 p-1.5 rounded-lg bg-[#29382f] text-primary">
+<span class="material-symbols-outlined text-[20px]">person</span>
+</div>
+<div class="flex-1">
+<p class="text-[#9eb7a8] text-xs font-medium uppercase tracking-wide">Instructor</p>
+<p class="text-white font-medium">Sarah Jenkins</p>
+</div>
+</div>
+<!-- Selected Date -->
+<div class="flex items-start gap-3">
+<div class="mt-1 p-1.5 rounded-lg bg-[#29382f] text-primary">
+<span class="material-symbols-outlined text-[20px]">event</span>
+</div>
+<div class="flex-1">
+<p class="text-[#9eb7a8] text-xs font-medium uppercase tracking-wide">Date &amp; Time</p>
+<p class="text-white font-medium">Oct 10, 2023</p>
+<p class="text-primary font-bold text-sm">01:00 PM - 03:00 PM</p>
+</div>
+</div>
+</div>
+<!-- Price Breakdown -->
+<div class="bg-surface-darker rounded-xl p-4 mt-2">
+<div class="flex justify-between mb-2 text-sm">
+<span class="text-[#9eb7a8]">Subtotal</span>
+<span class="text-white">$120.00</span>
+</div>
+<div class="flex justify-between mb-3 text-sm">
+<span class="text-[#9eb7a8]">Booking Fee</span>
+<span class="text-white">$5.00</span>
+</div>
+<div class="flex justify-between pt-3 border-t border-[#29382f]">
+<span class="text-white font-bold text-lg">Total</span>
+<span class="text-primary font-black text-2xl">$125.00</span>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex flex-col gap-3">
+<button class="w-full h-12 bg-primary hover:bg-[#2dc46a] text-black font-bold rounded-full transition-all transform active:scale-[0.98] shadow-[0_4px_14px_0_rgba(54,226,123,0.39)] flex items-center justify-center gap-2">
+                                Book Now <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+<p class="text-center text-[#5e6e65] text-xs">Free cancellation up to 24 hours before.</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

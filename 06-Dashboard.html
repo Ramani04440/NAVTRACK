@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NavTrack Dashboard</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        primary: "#3b82f6",
+        "background-dark": "#0f172a",
+        "card-dark-bg": "#1e293b",
+      },
+      fontFamily: {
+        body: ["Inter", "sans-serif"],
+      },
+      borderRadius: {
+        DEFAULT: "1rem",
+        xl: "1rem",
+        "2xl": "1.25rem",
+      },
+    },
+  },
+};
+</script>
+
+<style>
+.dark body {
+  background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+  min-height: 100vh;
+}
+</style>
+</head>
+
+<body class="bg-background-dark font-body text-white">
+
+<!-- NAVBAR -->
+<nav class="sticky top-0 z-50 bg-slate-800/90 backdrop-blur border-b border-slate-700">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex justify-between items-center h-20">
+
+      <div class="flex items-center gap-3">
+        <div class="bg-primary p-2 rounded-xl">
+          <span class="material-icons-round text-2xl">directions_car</span>
+        </div>
+        <span class="text-2xl font-bold">NavTrack</span>
+      </div>
+
+      <div class="hidden md:flex gap-6">
+        <a class="flex items-center gap-2 px-3 py-2 bg-blue-900/30 text-primary rounded-lg">
+          <span class="material-icons-round">home</span> Home
+        </a>
+        <a class="flex items-center gap-2 text-slate-400 hover:text-primary">
+          <span class="material-icons-round">calendar_today</span> Schedule
+        </a>
+        <a class="flex items-center gap-2 text-slate-400 hover:text-primary">
+          <span class="material-icons-round">school</span> Lessons
+        </a>
+        <a class="flex items-center gap-2 text-slate-400 hover:text-primary">
+          <span class="material-icons-round">credit_card</span> Payments
+        </a>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <button class="relative">
+          <span class="material-icons-round text-2xl">notifications</span>
+          <span class="absolute -top-1 -right-1 bg-red-500 text-xs px-1 rounded-full">3</span>
+        </button>
+        <div class="flex items-center gap-2 border-l border-slate-600 pl-4">
+          <div class="text-right hidden sm:block">
+            <p class="font-bold">Alex</p>
+            <p class="text-xs text-slate-400">Student</p>
+          </div>
+          <img class="w-10 h-10 rounded-full bg-slate-600" />
+        </div>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+<!-- MAIN -->
+<main class="max-w-7xl mx-auto px-6 py-5">
+
+<!-- HEADER -->
+<div class="mb-6 flex justify-between items-end">
+  <div>
+    <h1 class="text-4xl font-extrabold mb-1">Welcome, Alex 👋</h1>
+    <p class="text-slate-400">Here is your driving progress overview.</p>
+  </div>
+  <span class="material-icons-round text-7xl opacity-30">directions_car</span>
+</div>
+
+<!-- GRID -->
+<div class="grid grid-cols-12 gap-6">
+
+<!-- LEFT -->
+<div class="col-span-12 lg:col-span-8 space-y-6">
+
+<!-- TOP CARDS -->
+<div class="grid md:grid-cols-2 gap-6">
+  <div class="bg-card-dark-bg p-5 rounded-2xl flex justify-between items-center">
+    <div>
+      <p class="text-slate-400 text-sm">Distance Covered</p>
+      <h2 class="text-3xl font-black">18 KM</h2>
+    </div>
+    <span class="material-icons-round text-3xl">add_road</span>
+  </div>
+
+  <div class="bg-card-dark-bg p-5 rounded-2xl">
+    <div class="flex justify-between">
+      <div>
+        <p class="font-bold">Vehicle Assigned</p>
+        <p class="text-slate-400 text-sm">Honda Civic - HC-2024</p>
+      </div>
+      <span class="bg-green-900/40 text-green-400 text-xs px-3 py-1 rounded-full">Active</span>
+    </div>
+    <p class="text-primary text-sm mt-4 cursor-pointer">View Details →</p>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+  <div class="bg-pink-50 text-black p-4 rounded-2xl text-center">
+    <span class="material-icons-round">schedule</span>
+    <p class="text-xs font-semibold">Time Spent</p>
+    <p class="text-xl font-black">12 hrs</p>
+  </div>
+  <div class="bg-card-dark-bg p-4 rounded-2xl text-center">
+    <span class="material-icons-round">menu_book</span>
+    <p class="text-xs">Lessons</p>
+    <p class="text-xl font-black">6/25</p>
+  </div>
+  <div class="bg-card-dark-bg p-4 rounded-2xl text-center">
+    <span class="material-icons-round text-green-400">calendar_today</span>
+    <p class="text-sm font-bold">Attendance</p>
+    <p class="text-sm text-slate-400">6/20 Present</p>
+  </div>
+  <div class="bg-card-dark-bg p-4 rounded-2xl text-center">
+    <span class="material-icons-round text-yellow-400">verified</span>
+    <p class="text-sm font-bold">Certificate</p>
+    <p class="text-sm text-slate-400">15% Complete</p>
+  </div>
+</div>
+
+<!-- PROGRESS -->
+<div class="bg-card-dark-bg p-5 rounded-2xl">
+  <h3 class="font-bold mb-4">Driving Skills Progress</h3>
+
+  <div class="space-y-4">
+    <div>
+      <p class="text-slate-400 text-sm">Braking</p>
+      <div class="bg-slate-700 h-2 rounded-full">
+        <div class="bg-green-500 h-2 rounded-full w-[85%]"></div>
+      </div>
+    </div>
+    <div>
+      <p class="text-slate-400 text-sm">Turns</p>
+      <div class="bg-slate-700 h-2 rounded-full">
+        <div class="bg-primary h-2 rounded-full w-[70%]"></div>
+      </div>
+    </div>
+    <div>
+      <p class="text-slate-400 text-sm">Lane Discipline</p>
+      <div class="bg-slate-700 h-2 rounded-full">
+        <div class="bg-yellow-500 h-2 rounded-full w-[50%]"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<!-- RIGHT -->
+<div class="col-span-12 lg:col-span-4">
+  <h3 class="text-xl font-bold mb-4">Quick Access</h3>
+
+  <div class="grid grid-cols-2 gap-4">
+    <!-- ALL buttons FIXED (no aspect-square) -->
+    <button class="bg-blue-50 text-blue-900 p-4 rounded-2xl flex flex-col items-center min-h-[110px]">
+      <span class="material-icons-round text-3xl mb-1">event</span>Schedule
+    </button>
+    <button class="bg-purple-50 text-purple-900 p-4 rounded-2xl flex flex-col items-center min-h-[110px]">
+      <span class="material-icons-round text-3xl mb-1">add</span>Book Lesson
+    </button>
+    <button class="bg-green-50 text-green-900 p-4 rounded-2xl flex flex-col items-center min-h-[110px]">
+      <span class="material-icons-round text-3xl mb-1">menu_book</span>Materials
+    </button>
+    <button class="bg-red-50 text-red-900 p-4 rounded-2xl flex flex-col items-center min-h-[110px]">
+      <span class="material-icons-round text-3xl mb-1">play_arrow</span>Videos
+    </button>
+    <button class="bg-yellow-50 text-yellow-900 p-4 rounded-2xl flex flex-col items-center min-h-[110px]">
+      <span class="material-icons-round text-3xl mb-1">description</span>Documents
+    </button>
+    <button class="bg-indigo-50 text-indigo-900 p-4 rounded-2xl flex flex-col items-center min-h-[110px]">
+      <span class="material-icons-round text-3xl mb-1">payment</span>Payments
+    </button>
+    <button class="bg-teal-50 text-teal-900 p-4 rounded-2xl flex flex-col items-center min-h-[110px]">
+      <span class="material-icons-round text-3xl mb-1">person</span>Instructor
+    </button>
+    <button class="bg-pink-50 text-pink-900 p-4 rounded-2xl flex flex-col items-center min-h-[110px]">
+      <span class="material-icons-round text-3xl mb-1">headset_mic</span>Support
+    </button>
+  </div>
+</div>
+
+</div>
+</main>
+
+</body>
+</html>

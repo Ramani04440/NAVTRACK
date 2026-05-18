@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NavTrack Desktop Landing Page</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#197fe6",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#111921",
+                        "accent-green": "#10b981", // Adding accent green mentioned in prompt
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for dark theme */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #111921; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #243647; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #374e61; 
+        }
+        
+        .glass-card {
+            background: rgba(26, 38, 50, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display overflow-x-hidden">
+<div class="relative flex flex-col min-h-screen">
+<!-- Header -->
+<header class="sticky top-0 z-50 w-full border-b border-white/10 bg-[#111921]/90 backdrop-blur-md">
+<div class="flex h-16 items-center justify-between px-6 lg:px-20 max-w-7xl mx-auto w-full">
+<div class="flex items-center gap-2">
+<div class="flex items-center justify-center size-8 rounded-lg bg-primary/20 text-primary">
+<span class="material-symbols-outlined">navigation</span>
+</div>
+<span class="text-xl font-bold tracking-tight text-white">NavTrack</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium text-slate-300 hover:text-primary transition-colors" href="#features">Features</a>
+<a class="text-sm font-medium text-slate-300 hover:text-primary transition-colors" href="#how-it-works">How it Works</a>
+<a class="text-sm font-medium text-slate-300 hover:text-primary transition-colors" href="#instructors">Instructors</a>
+</nav>
+<div class="flex items-center gap-4">
+<a class="hidden sm:block text-sm font-medium text-slate-300 hover:text-white" href="#">Log in</a>
+<button class="h-9 px-4 rounded-lg bg-primary hover:bg-primary/90 text-white text-sm font-bold transition-colors shadow-[0_0_15px_rgba(25,127,230,0.3)]">
+                        Get Started
+                    </button>
+</div>
+</div>
+</header>
+<main class="flex-1 flex flex-col">
+<!-- Hero Section -->
+<section class="relative py-16 lg:py-24 overflow-hidden">
+<!-- Background Gradient Effect -->
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-primary/10 rounded-full blur-[100px] pointer-events-none -z-10"></div>
+<div class="max-w-7xl mx-auto px-6 lg:px-20">
+<div class="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+<div class="flex flex-col gap-6 text-center lg:text-left">
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-white">
+                                Drive Smart.<br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent-green">Track Progress.</span><br/>
+                                Achieve More.
+                            </h1>
+<p class="text-slate-400 text-lg md:text-xl max-w-lg mx-auto lg:mx-0 leading-relaxed">
+                                The all-in-one management system for modern driving schools. streamline operations, track student success, and grow your business.
+                            </p>
+<div class="flex flex-wrap gap-4 justify-center lg:justify-start pt-4">
+<button class="h-12 px-8 rounded-lg bg-primary hover:bg-blue-600 text-white font-bold text-base transition-all shadow-lg hover:shadow-primary/25">
+                                    Get Started
+                                </button>
+<button class="h-12 px-8 rounded-lg bg-[#243647] hover:bg-[#2f455a] border border-white/5 text-white font-bold text-base transition-all">
+                                    Book a Lesson
+                                </button>
+</div>
+</div>
+<div class="relative w-full aspect-[4/3] lg:aspect-square rounded-2xl overflow-hidden shadow-2xl border border-white/10 group">
+<div class="absolute inset-0 bg-gradient-to-t from-[#111921] via-transparent to-transparent z-10"></div>
+<div class="w-full h-full bg-cover bg-center" data-alt="Futuristic car dashboard with digital map navigation and analytics overlay" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA3CidKNGAScj3SocLFPEuZL1l8eif215QVgaqw-VR8tz2T9HE9lZ7bBRb9Ij4JEUddROr_Yg1oCNPeLAc-n0VsVt1O_kjigXoi-4ZRdQGwx4WmPYheDl3AfCHVMyQImnciSF5b9ZMhJi_CmWZp4H8CnQ_jkNHuoh1dvX7aZ464a8q2cxIPNDzZIkHB8w-xvvrSFncqMgN9SQFNIq_v-yOXmgz-w74lrqCjbl1d2M2oX8mmu7DX3AZm2N5_V5BbbFqAT6JFqI-NbA');"></div>
+<!-- Floating UI Element Mockup -->
+<div class="absolute bottom-8 left-8 right-8 bg-[#1a2632]/90 backdrop-blur-md p-4 rounded-xl border border-white/10 shadow-lg z-20 hidden sm:block transform transition-transform group-hover:scale-[1.02]">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-2">
+<div class="size-8 rounded-full bg-accent-green/20 flex items-center justify-center text-accent-green">
+<span class="material-symbols-outlined text-lg">check_circle</span>
+</div>
+<div>
+<p class="text-sm font-bold text-white">Route Completed</p>
+<p class="text-xs text-slate-400">Downtown Circuit • 45 mins</p>
+</div>
+</div>
+<span class="text-accent-green font-bold text-sm">+95 pts</span>
+</div>
+<div class="w-full bg-white/5 rounded-full h-1.5 overflow-hidden">
+<div class="bg-accent-green h-full rounded-full" style="width: 85%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Features Section -->
+<section class="py-16 bg-[#161e29]" id="features">
+<div class="max-w-7xl mx-auto px-6 lg:px-20">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+<div>
+<h2 class="text-primary font-bold tracking-wider uppercase text-sm mb-2">Features</h2>
+<h3 class="text-3xl md:text-4xl font-bold text-white leading-tight">Everything needed to<br/>manage your school</h3>
+</div>
+<p class="text-slate-400 max-w-md text-sm md:text-base">Comprehensive tools designed specifically for students, instructors, and administrators to work together seamlessly.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Feature 1 -->
+<div class="glass-card p-6 rounded-xl hover:-translate-y-1 transition-transform duration-300">
+<div class="size-12 rounded-lg bg-blue-500/10 flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined text-2xl">calendar_month</span>
+</div>
+<h4 class="text-lg font-bold text-white mb-2">Online Booking</h4>
+<p class="text-slate-400 text-sm leading-relaxed">Students can register and book driving lessons online 24/7 with real-time availability.</p>
+</div>
+<!-- Feature 2 -->
+<div class="glass-card p-6 rounded-xl hover:-translate-y-1 transition-transform duration-300">
+<div class="size-12 rounded-lg bg-green-500/10 flex items-center justify-center text-accent-green mb-4">
+<span class="material-symbols-outlined text-2xl">trending_up</span>
+</div>
+<h4 class="text-lg font-bold text-white mb-2">Visual Tracking</h4>
+<p class="text-slate-400 text-sm leading-relaxed">Track student learning progress visually with detailed charts and milestone achievements.</p>
+</div>
+<!-- Feature 3 -->
+<div class="glass-card p-6 rounded-xl hover:-translate-y-1 transition-transform duration-300">
+<div class="size-12 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-400 mb-4">
+<span class="material-symbols-outlined text-2xl">credit_card</span>
+</div>
+<h4 class="text-lg font-bold text-white mb-2">Secure Payments</h4>
+<p class="text-slate-400 text-sm leading-relaxed">Integrated secure online payment system for hassle-free transactions and automated invoicing.</p>
+</div>
+<!-- Feature 4 -->
+<div class="glass-card p-6 rounded-xl hover:-translate-y-1 transition-transform duration-300">
+<div class="size-12 rounded-lg bg-orange-500/10 flex items-center justify-center text-orange-400 mb-4">
+<span class="material-symbols-outlined text-2xl">groups</span>
+</div>
+<h4 class="text-lg font-bold text-white mb-2">Instructor Mgmt</h4>
+<p class="text-slate-400 text-sm leading-relaxed">Efficient instructor scheduling, payroll calculation, and student assignment tools.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- How It Works Section -->
+<section class="py-20 relative" id="how-it-works">
+<div class="max-w-7xl mx-auto px-6 lg:px-20">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-white mb-4">How It Works</h2>
+<p class="text-slate-400 max-w-2xl mx-auto">Getting your license has never been easier. Follow these simple steps to start your journey.</p>
+</div>
+<div class="relative grid md:grid-cols-3 gap-8">
+<!-- Connector Line (Desktop) -->
+<div class="hidden md:block absolute top-12 left-[16%] right-[16%] h-0.5 bg-gradient-to-r from-primary/20 via-primary/50 to-primary/20 -z-10"></div>
+<!-- Step 1 -->
+<div class="flex flex-col items-center text-center relative">
+<div class="size-24 rounded-full bg-[#111921] border-4 border-[#243647] flex items-center justify-center mb-6 z-10 shadow-[0_0_20px_rgba(0,0,0,0.5)]">
+<span class="material-symbols-outlined text-4xl text-primary">person_add</span>
+</div>
+<div class="bg-[#1a2632] p-6 rounded-xl border border-white/5 w-full h-full">
+<span class="text-xs font-bold text-primary uppercase tracking-wider mb-2 block">Step 1</span>
+<h3 class="text-xl font-bold text-white mb-3">Register &amp; Choose</h3>
+<p class="text-slate-400 text-sm">Create your profile and browse through our list of certified instructors to find your perfect match.</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col items-center text-center relative">
+<div class="size-24 rounded-full bg-[#111921] border-4 border-[#243647] flex items-center justify-center mb-6 z-10 shadow-[0_0_20px_rgba(0,0,0,0.5)]">
+<span class="material-symbols-outlined text-4xl text-primary">edit_calendar</span>
+</div>
+<div class="bg-[#1a2632] p-6 rounded-xl border border-white/5 w-full h-full">
+<span class="text-xs font-bold text-primary uppercase tracking-wider mb-2 block">Step 2</span>
+<h3 class="text-xl font-bold text-white mb-3">Schedule Lessons</h3>
+<p class="text-slate-400 text-sm">Book driving slots that fit your schedule using our interactive calendar system.</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col items-center text-center relative">
+<div class="size-24 rounded-full bg-[#111921] border-4 border-[#243647] flex items-center justify-center mb-6 z-10 shadow-[0_0_20px_rgba(0,0,0,0.5)]">
+<span class="material-symbols-outlined text-4xl text-primary">sports_score</span>
+</div>
+<div class="bg-[#1a2632] p-6 rounded-xl border border-white/5 w-full h-full">
+<span class="text-xs font-bold text-primary uppercase tracking-wider mb-2 block">Step 3</span>
+<h3 class="text-xl font-bold text-white mb-3">Track &amp; Complete</h3>
+<p class="text-slate-400 text-sm">Monitor your progress after each lesson and complete your training to get licensed.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Instructor Platform Section -->
+<section class="py-20 bg-[#161e29]" id="instructors">
+<div class="max-w-7xl mx-auto px-6 lg:px-20">
+<div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+<!-- Image/Mockup Side -->
+<div class="w-full lg:w-1/2 relative order-2 lg:order-1">
+<div class="absolute -inset-4 bg-gradient-to-r from-primary/20 to-accent-green/20 rounded-xl blur-2xl -z-10"></div>
+<div class="bg-[#111921] rounded-xl border border-white/10 overflow-hidden shadow-2xl">
+<!-- Mockup Header -->
+<div class="bg-[#1f2e3d] px-4 py-3 flex items-center gap-2 border-b border-white/5">
+<div class="size-3 rounded-full bg-red-500"></div>
+<div class="size-3 rounded-full bg-yellow-500"></div>
+<div class="size-3 rounded-full bg-green-500"></div>
+</div>
+<!-- Mockup Content -->
+<div class="bg-cover bg-center h-[300px] md:h-[400px]" data-alt="Instructor dashboard interface showing student list and schedule overview" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDJCZt4pQJIN8vnu6LcQl4b0uw2XoGkCoYAiyXc_M1W5wmxH1c2tPaz3CgR6tjWsf0ykmhnhYfvGHildNOcDt97o24Is4A8zxvnQRxitBCbcakG5YwOMnWWdjK1uky8N-qLJiWvXHyRN10svZgR2-lIxDNxtLwmGt--T7EvjueypRNxHllBozuj79Ug__ZOXTyKVFcrSTN4W55cwPN5LkTYZjCZ1MF5W16AjGL7y1JBzsov3z0solc6cuatZJ3RgWzxjbZPLXq5ZA');"></div>
+</div>
+</div>
+<!-- Text Content Side -->
+<div class="w-full lg:w-1/2 order-1 lg:order-2">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-green/10 text-accent-green text-xs font-bold uppercase tracking-wider mb-4">
+<span class="size-2 rounded-full bg-accent-green"></span>
+                                For Instructors
+                            </div>
+<h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Empowering Instructors with Powerful Tools</h2>
+<p class="text-slate-400 text-lg mb-8">NavTrack isn't just for students. We provide instructors with a dedicated dashboard to manage their business efficiently.</p>
+<ul class="space-y-6">
+<li class="flex items-start gap-4">
+<div class="mt-1 size-6 rounded bg-primary/20 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-sm">check</span>
+</div>
+<div>
+<h4 class="text-white font-bold text-base">Manage Students</h4>
+<p class="text-slate-400 text-sm mt-1">Access student profiles, history, and learning preferences instantly.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<div class="mt-1 size-6 rounded bg-primary/20 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-sm">check</span>
+</div>
+<div>
+<h4 class="text-white font-bold text-base">Schedule Lessons</h4>
+<p class="text-slate-400 text-sm mt-1">Set your availability and let the system handle bookings automatically.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<div class="mt-1 size-6 rounded bg-primary/20 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-sm">check</span>
+</div>
+<div>
+<h4 class="text-white font-bold text-base">Monitor Progress</h4>
+<p class="text-slate-400 text-sm mt-1">Log lesson results and track student improvement over time.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="py-24 relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-b from-[#111921] to-[#0d1218]"></div>
+<!-- Radial Glow -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-primary/5 rounded-full blur-[80px] pointer-events-none"></div>
+<div class="relative max-w-4xl mx-auto px-6 text-center z-10">
+<h2 class="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">Start Your Driving Journey with NavTrack</h2>
+<p class="text-slate-400 text-lg mb-10 max-w-2xl mx-auto">Join thousands of students and instructors who trust NavTrack for a seamless learning experience.</p>
+<button class="h-14 px-10 rounded-xl bg-primary hover:bg-blue-600 text-white font-bold text-lg transition-all shadow-[0_0_30px_rgba(25,127,230,0.4)] hover:scale-105">
+                        Get Started Free
+                    </button>
+<p class="mt-6 text-slate-500 text-sm">No credit card required for demo.</p>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0f151a] border-t border-white/5 py-12">
+<div class="max-w-7xl mx-auto px-6 lg:px-20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 mb-4">
+<div class="flex items-center justify-center size-6 rounded bg-primary/20 text-primary">
+<span class="material-symbols-outlined text-sm">navigation</span>
+</div>
+<span class="text-lg font-bold text-white">NavTrack</span>
+</div>
+<p class="text-slate-500 text-sm leading-relaxed">Modernizing driving education one lesson at a time. The smart choice for schools and students.</p>
+</div>
+<div>
+<h4 class="text-white font-bold mb-4">Platform</h4>
+<ul class="space-y-2">
+<li><a class="text-slate-400 hover:text-primary text-sm transition-colors" href="#">Features</a></li>
+<li><a class="text-slate-400 hover:text-primary text-sm transition-colors" href="#">For Instructors</a></li>
+<li><a class="text-slate-400 hover:text-primary text-sm transition-colors" href="#">Pricing</a></li>
+<li><a class="text-slate-400 hover:text-primary text-sm transition-colors" href="#">Demo</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-4">Company</h4>
+<ul class="space-y-2">
+<li><a class="text-slate-400 hover:text-primary text-sm transition-colors" href="#">About Us</a></li>
+<li><a class="text-slate-400 hover:text-primary text-sm transition-colors" href="#">Careers</a></li>
+<li><a class="text-slate-400 hover:text-primary text-sm transition-colors" href="#">Blog</a></li>
+<li><a class="text-slate-400 hover:text-primary text-sm transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-4">Legal</h4>
+<ul class="space-y-2">
+<li><a class="text-slate-400 hover:text-primary text-sm transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-slate-400 hover:text-primary text-sm transition-colors" href="#">Terms of Service</a></li>
+<li><a class="text-slate-400 hover:text-primary text-sm transition-colors" href="#">Cookie Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-slate-600 text-sm">© 2023 NavTrack Inc. All rights reserved.</p>
+<div class="flex gap-4">
+<a class="text-slate-400 hover:text-white transition-colors" href="#"><span class="material-symbols-outlined text-xl">share</span></a>
+<a class="text-slate-400 hover:text-white transition-colors" href="#"><span class="material-symbols-outlined text-xl">mail</span></a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</body></html>
